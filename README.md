@@ -37,10 +37,17 @@ Enterprise supply chains and distributed operations frequently suffer disruption
 
 ## 🖥️ Interactive Web Platform & Snapshots
 
-The project includes both a **Python high-performance simulation core** and an **interactive single-page web application** (built with React/Vite, featuring dark/light telemetry, interactive causal DAG exploration, live cash trajectory curves, and audit trails).
+The project provides an **interactive, production single-page web application** (SPA) built with React and Vite, featuring dark/light telemetry, interactive causal DAG exploration, live cash trajectory curves, and real-time audit trails.
 
-> **Live Deployment:** [https://yuvraj-cashflow.anshulpanigrahi3678.chatgpt.site/#top](https://yuvraj-cashflow.anshulpanigrahi3678.chatgpt.site/#top)  
-> You can also run the web dashboard locally with zero external dependencies: `python3 -m http.server 3000 --directory web`
+> 🌐 **Live Web Application URL:** [https://yuvraj-cashflow.anshulpanigrahi3678.chatgpt.site/#top](https://yuvraj-cashflow.anshulpanigrahi3678.chatgpt.site/#top)  
+> 💻 **Local Offline Serving:** `python3 -m http.server 3000 --directory web` (Open `http://localhost:3000`)
+
+### What the Web Application Does:
+1. **Interactive Causal Multigraph Explorer**: Inspect all 13 transactional mechanism nodes (Suppliers, POs, Inventory Receipts, Production Events, Customer Orders, Invoices, AR, AP, Cash) and 14 dual-transform edges. Click any node to inspect real-time state deltas, operational latency $\delta_e$, and transfer operators $\psi_e$.
+2. **Dual-Cascade Monetary Decomposition**: Live visual representation of **Path A** (Primary Delay Cascade — delayed billing & deferred cash inflows: $-\$178,125$ / $81\%$) and **Path B** (Expedited Cost Surge — emergency spot sourcing: $-\$45,000$ / $19\%$), verifying exact mathematical conservation ($100.0\%$).
+3. **Dynamic Cash Trajectory Canvas**: Real-time canvas rendering of the 120-day baseline cash trajectory vs. disturbed scenario trajectory, highlighting the **Liquidity Impact Window** envelope ($D = 47\text{ days}$), the peak deficit ($-\$218,400$ at $T+72\text{d}$), and the critical $\$150\text{K}$ safety reserve bound.
+4. **Step-by-Step Propagation Audit Ledger**: Serialized 12-hop chronological execution trail with propagation rules, latency offsets, and confidence ratings.
+5. **Scenario Control Panel**: Test operational disruptions (such as `DIST-001: PrimePlast Co capacity -30%`) with instant recalculation.
 
 <div align="center">
 
