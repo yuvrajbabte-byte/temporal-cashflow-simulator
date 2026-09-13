@@ -1,0 +1,15 @@
+edge_id,source_node,target_node,relationship_type,dependency_strength,expected_delay_days,monetary_conversion,propagation_rule,confidence
+E001,Supplier,PurchaseOrder,triggers,0.7,14,volume_fraction,linear,0.95
+E002,PurchaseOrder,InventoryReceipt,creates,0.95,7,direct,linear,0.92
+E003,InventoryReceipt,ProductionEvent,enables,0.8,14,production_yield,threshold,0.88
+E004,ProductionEvent,CustomerOrder,fulfills,0.85,7,fill_rate,linear,0.85
+E005,CustomerOrder,Invoice,triggers,1.0,0,order_value,linear,0.9
+E006,Invoice,AccountsReceivable,creates,1.0,30,direct,linear,0.95
+E007,AccountsReceivable,CustomerPayment,settles,0.95,0,collection_prob,stochastic,0.9
+E008,CustomerPayment,CashAccount,credits,1.0,0,direct,direct,1.0
+E009,Supplier,ExpenseEvent,triggers_emergency,1.0,7,emergency_cost,nonlinear,0.8
+E010,ExpenseEvent,AccountsPayable,creates,1.0,30,direct,linear,0.95
+E011,AccountsPayable,SupplierPayment,settles,1.0,0,direct,direct,1.0
+E012,SupplierPayment,CashAccount,debits,1.0,0,direct,direct,1.0
+E013,InventoryReceipt,AccountsPayable,creates_ap,1.0,45,direct,linear,1.0
+E014,CashAccount,FinancingEvent,triggers_if_below_threshold,0.8,1,credit_draw,threshold,0.85

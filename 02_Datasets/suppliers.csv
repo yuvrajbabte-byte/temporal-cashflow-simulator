@@ -1,0 +1,13 @@
+supplier_id,name,monthly_capacity_units,reliability_score,payment_term_days,unit_cost_usd,lead_time_days,country
+S01,S01-NexCore Materials,1660,0.79,30,55.57,16,China
+S02,S02-AlphaSteel Ltd,2038,0.76,30,55.88,14,China
+S03,S03-PrimePlast Co,2485,0.76,45,27.5,18,Vietnam
+S04,S04-TechMetal Inc,1984,0.82,45,12.52,15,India
+S05,S05-GreenFiber AG,1274,0.89,45,15.41,18,China
+S06,S06-OmegaAlloys,2699,0.87,30,15.39,9,Vietnam
+S07,S07-BlueLine Rubber,2097,0.97,45,71.01,15,Germany
+S08,S08-PrecisionGlass,2163,0.81,60,56.53,14,China
+S09,S09-SwiftFoam,2755,0.79,45,43.04,12,Germany
+S10,S10-AlloyTech,2300,0.97,45,44.83,16,USA
+S11,S11-NanoParts,1615,0.83,45,26.31,15,Vietnam
+S12,S12-EcoTex,1137,0.87,45,82.46,18,USA

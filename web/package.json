@@ -1,0 +1,12 @@
+{
+  "name": "temporal-ledger-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Temporal Ledger — CashFlow Intelligence interactive dashboard",
+  "scripts": {
+    "start": "npx serve -l 3000 .",
+    "preview": "python3 -m http.server 3000"
+  },
+  "author": "Yuvraj Babte <yuvrajbabte-byte>",
+  "license": "MIT"
+}

@@ -1,0 +1,28 @@
+{
+  "disturbance_id": "DIST-001",
+  "disturbance_label": "Supplier S03 (PrimePlast Co) capacity -30%",
+  "scenario_created": "2026-09-03T11:30:00+05:30",
+  "impact_start_date": "2026-07-22",
+  "impact_peak_date": "2026-09-11",
+  "peak_cash_deficit_usd": -218400,
+  "impact_duration_days": 47,
+  "recovery_start_date": "2026-09-24",
+  "recovery_date": "2026-10-12",
+  "cumulative_cash_delta_usd": -341750,
+  "path_contributions": [
+    {
+      "path": "PathA_RevenueChain",
+      "monetary_impact_usd": -178125,
+      "percentage": 81
+    },
+    {
+      "path": "PathB_EmergencyProcurement",
+      "monetary_impact_usd": -45000,
+      "percentage": 19
+    }
+  ],
+  "top_contributing_paths": [
+    "Supplier\u2192PO\u2192IR\u2192Production\u2192CustomerOrder\u2192Invoice\u2192AR\u2192Payment\u2192Cash (-81%)",
+    "Supplier\u2192EmergencyProcurement\u2192AP\u2192SupplierPayment\u2192Cash (-19%)"
+  ]
+}

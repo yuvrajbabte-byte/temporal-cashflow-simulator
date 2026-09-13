@@ -1,0 +1,13 @@
+disturbance_id,source_event,target_event,source_variable,target_variable,source_delta,target_delta,dependency_strength,delay_days,propagation_rule,confidence,scheduled_day_from_t0
+DIST-001,Supplier[S03],PurchaseOrder[PO-012],capacity_reduction,volume_reduction,-0.3,-0.3,0.7,14,linear,0.95,0
+DIST-001,PurchaseOrder[PO-012],InventoryReceipt[IR-009],volume_reduction,units_received,-0.3,-0.285,0.95,7,linear,0.92,14
+DIST-001,InventoryReceipt[IR-009],ProductionEvent[PROD-004],units_received,output_reduction,-0.285,-0.228,0.8,14,threshold,0.88,21
+DIST-001,ProductionEvent[PROD-004],CustomerOrder[CO-031],output_reduction,fulfillment_shortfall,-0.228,-0.194,0.85,7,linear,0.85,35
+DIST-001,CustomerOrder[CO-031],Invoice[INV-031],fulfillment_shortfall,invoice_value_usd,-0.194,-187500.0,1.0,0,monetary_conversion,0.9,42
+DIST-001,Invoice[INV-031],AccountsReceivable[AR-031],invoice_value_usd,ar_reduction_usd,-187500.0,-187500.0,1.0,30,linear,0.95,42
+DIST-001,AccountsReceivable[AR-031],CustomerPayment[CP-031],ar_reduction_usd,cash_inflow_reduction_usd,-187500.0,-178125.0,0.95,0,collection_probability,0.9,72
+DIST-001,CustomerPayment[CP-031],CashAccount,cash_inflow_reduction_usd,cash_balance_reduction_usd,-178125.0,-178125.0,1.0,0,direct,1.0,72
+DIST-001,Supplier[S03],ExpenseEvent[EMRG-001],capacity_reduction,emergency_cost_usd,-0.3,45000.0,1.0,7,nonlinear,0.8,0
+DIST-001,ExpenseEvent[EMRG-001],AccountsPayable[AP-EMRG],emergency_cost_usd,payable_increase_usd,45000.0,45000.0,1.0,30,linear,0.95,7
+DIST-001,AccountsPayable[AP-EMRG],SupplierPayment[SP-EMRG],payable_due_usd,cash_outflow_usd,45000.0,45000.0,1.0,0,direct,1.0,37
+DIST-001,SupplierPayment[SP-EMRG],CashAccount,cash_outflow_usd,cash_balance_reduction_usd,45000.0,-45000.0,1.0,0,direct,1.0,37
